@@ -1,0 +1,50 @@
+_schema-version: "3.2"
+ID: Forms
+version: 0.0.1
+modules:
+- name: forms-approuter
+  type: approuter.nodejs
+  path: forms-approuter
+  requires:
+  - name: Forms_html_repo_runtime
+  parameters:
+    disk-quota: 256M
+    memory: 256M
+- name: Forms_ui_deployer
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: Forms_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - Front-content.zip
+      name: Front
+      target-path: resources/
+- name: Front
+  type: html5
+  path: Front
+  build-parameters:
+    builder: custom
+    commands:
+    - npm run build
+    supported-platforms: []
+resources:
+- name: Forms_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+- name: Forms_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    - npm install

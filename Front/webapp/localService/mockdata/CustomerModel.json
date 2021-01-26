@@ -1,0 +1,85 @@
+{
+    "forms": [
+        {
+            "name": "Julie Armstrong",
+            "street": {
+                "name": "Mainstreet",
+                "number": 1278
+            },
+            "zip": {
+                "code": 12345,
+                "city": "Boston"
+            },
+            "country": "US",
+            "email": "JulieArmstronglogaligroup.com",
+            "phone": {
+                "number": "+1 (610) 661-1000",
+                "time": "12:00"
+            },
+            "website": "www.logaligroup.com"
+        },
+        {
+            "name": "Denise Smith",
+            "street": {
+                "name": "Mainstreet",
+                "number": 1567
+            },
+            "zip": {
+                "code": 12345,
+                "city": "Maintown"
+            },
+            "country": "EN",
+            "email": "DeniseSmith@logaligroup.com",
+            "phone": {
+                "number": "+1 (610) 661-1000",
+                "time": "12:00"
+            },
+            "website": "n/a"
+        },
+        {
+            "name": "Richard Wilson",
+            "street": {
+                "name": "Mainstreet",
+                "number": 2984
+            },
+            "zip": {
+                "code": 12345,
+                "city": "Maintown"
+            },
+            "country": "DE",
+            "email": "RichardWilson@logaligroup.com",
+            "phone": {
+                "number": "+1 (610) 661-1000",
+                "time": "12:00"
+            },
+            "website": "n/a"
+        },
+        {
+            "name": "Gerd Becker",
+            "street": {
+                "name": "Mainstreet",
+                "number": 3614
+            },
+            "zip": {
+                "code": 12345,
+                "city": "Berlin"
+            },
+            "country": "DE",
+            "email": "GerdBecker@logaligroup.com",
+            "phone": {
+                "number": "+1 (610) 661-1000",
+                "time": "12:00"
+            }
+        }
+    ],
+    "employment": [
+        {
+            "jobTitle": "Senior UI Developer (UIDEV-SR)",
+            "payGrade": "Salary Grade 65 (GR-14)",
+            "unit": "USD",
+            "class": "Employee",
+            "fte": 1,
+            "weeklyHours": 40
+        }
+    ]
+}
